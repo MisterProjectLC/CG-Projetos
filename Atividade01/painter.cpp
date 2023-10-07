@@ -4,7 +4,6 @@
 CImg<unsigned char> Painter::get_blank_canvas(int width, int height, unsigned char color[]) {
 	CImg<unsigned char> image(width, height, 1, 3, 255);
 	image.draw_rectangle(0, 0, width, height, color);
-	image.display();
 	return image;
 }
 
@@ -20,7 +19,7 @@ unsigned char* color_lerp(unsigned char* color, unsigned char* a, unsigned char*
 }
 
 
-CImg<unsigned char> Painter::draw_horizontal_gradient(CImg<unsigned char> image, 
+void Painter::draw_horizontal_gradient(CImg<unsigned char> *image, 
 		int x0, int y0, unsigned char color1[],	
 		int x1, int y1, unsigned char color2[]) {
 
@@ -30,18 +29,24 @@ CImg<unsigned char> Painter::draw_horizontal_gradient(CImg<unsigned char> image,
 		color_lerp(color, color1, color2, percentage);
 
 		for (int y = y0; y < y1; y++) {
-			image = image.draw_point(x, y, color, 1);
+			image->draw_point(x, y, color, 1);
 		}
 	}
-
-	return image;
-
 }
 
 
-CImg<unsigned char> Painter::draw_triangle(int x0, int y0, int x1, int y1, int x2, int y2, unsigned char color[]) {
-	CImg<unsigned char> image(100, 100, 1, 3, 0);
-	return image;
+const float calculate_distance(int x0, int y0, int x1, int y1) {
+	return sqrt((x1 - x0) * (x1 - x0) + (y1 - y0) * (y1 - y0));
+}
+
+
+void Painter::draw_circle(CImg<unsigned char>* image, int center_x, int center_y, int radius, unsigned char color[]) {
+	for (int x = center_x - radius; x < center_x + radius; x++) {
+		for (int y = center_y - radius; y < center_y + radius; y++) {
+			if (calculate_distance(x, y, center_x, center_y) <= radius)
+				image->draw_point(x, y, color, 1);
+		}
+	}
 }
 
 

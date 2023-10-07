@@ -13,9 +13,9 @@ private:
 
 public:
 	CImg<unsigned char> get_blank_canvas(int width, int height, unsigned char color[]);
-	CImg<unsigned char> draw_horizontal_gradient(CImg<unsigned char> image, int x0, int y0, unsigned char color1[],
+	void draw_horizontal_gradient(CImg<unsigned char> *image, int x0, int y0, unsigned char color1[],
 			int x1, int y1, unsigned char color2[]);
-	CImg<unsigned char> draw_triangle(int x0, int y0, int x1, int y1, int x2, int y2, unsigned char color[]);
+	void draw_circle(CImg<unsigned char>* image, int center_x, int center_y, int radius, unsigned char color[]);
 
 	void save(CImg<unsigned char> image, string title);
 };
