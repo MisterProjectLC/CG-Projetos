@@ -1,0 +1,5 @@
+﻿  Main.cpp
+  painter.cpp
+E:\Documentos\UFSCAR\Computação Gráfica\Projetos\Atividade01\painter.cpp(12,11): warning C4244: 'return': conversion from 'float' to 'unsigned char', possible loss of data
+  Generating Code...
+  Atividade01.vcxproj -> E:\Documentos\UFSCAR\Computação Gráfica\Projetos\Debug\Atividade01.exe
