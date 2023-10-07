@@ -1,0 +1,112 @@
+\doxysection{Painter Class Reference}
+\hypertarget{class_painter}{}\label{class_painter}\index{Painter@{Painter}}
+
+
+{\ttfamily \#include $<$painter.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+CImg$<$ unsigned char $>$ \mbox{\hyperlink{class_painter_a2d00b88bd2bfbd7d26c9af58ade4a067}{get\+\_\+blank\+\_\+canvas}} (int width, int height, unsigned char color\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{class_painter_a695aff291c06f0ee52eec9c2449e8d0a}{draw\+\_\+horizontal\+\_\+gradient}} (CImg$<$ unsigned char $>$ \texorpdfstring{$\ast$}{*}image, int x0, int y0, unsigned char color1\mbox{[}$\,$\mbox{]}, int x1, int y1, unsigned char color2\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{class_painter_a033d9e87bdb45e93a6ab0834f772db23}{draw\+\_\+circle}} (CImg$<$ unsigned char $>$ \texorpdfstring{$\ast$}{*}image, int center\+\_\+x, int center\+\_\+y, int radius, unsigned char color\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{class_painter_a1f650d0607fbe2c1bd493b1eb4ced6d6}{save}} (CImg$<$ unsigned char $>$ image, string title)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe para desenhar e salvar imagens.
+
+Classe para desenhar e salvar imagens. Utiliza a biblioteca CImg. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_painter_a033d9e87bdb45e93a6ab0834f772db23}\label{class_painter_a033d9e87bdb45e93a6ab0834f772db23} 
+\index{Painter@{Painter}!draw\_circle@{draw\_circle}}
+\index{draw\_circle@{draw\_circle}!Painter@{Painter}}
+\doxysubsubsection{\texorpdfstring{draw\_circle()}{draw\_circle()}}
+{\footnotesize\ttfamily void Painter\+::draw\+\_\+circle (\begin{DoxyParamCaption}\item[{CImg$<$ unsigned char $>$ \texorpdfstring{$\ast$}{*}}]{image,  }\item[{int}]{center\+\_\+x,  }\item[{int}]{center\+\_\+y,  }\item[{int}]{radius,  }\item[{unsigned char}]{color\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Desenha um círculo na imagem.
+
+Desenha um círculo na imagem. 
+\begin{DoxyParams}{Parameters}
+{\em image} & Ponteiro para a imagem na qual o círculo deve ser desenhado. \\
+\hline
+{\em center\+\_\+x} & Coordenada x do centro do círculo. \\
+\hline
+{\em center\+\_\+y} & Coordenada y do centro do círculo. \\
+\hline
+{\em radius} & Raio do círculo. \\
+\hline
+{\em color} & Cor do círculo. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_painter_a695aff291c06f0ee52eec9c2449e8d0a}\label{class_painter_a695aff291c06f0ee52eec9c2449e8d0a} 
+\index{Painter@{Painter}!draw\_horizontal\_gradient@{draw\_horizontal\_gradient}}
+\index{draw\_horizontal\_gradient@{draw\_horizontal\_gradient}!Painter@{Painter}}
+\doxysubsubsection{\texorpdfstring{draw\_horizontal\_gradient()}{draw\_horizontal\_gradient()}}
+{\footnotesize\ttfamily void Painter\+::draw\+\_\+horizontal\+\_\+gradient (\begin{DoxyParamCaption}\item[{CImg$<$ unsigned char $>$ \texorpdfstring{$\ast$}{*}}]{image,  }\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{unsigned char}]{color1\mbox{[}$\,$\mbox{]},  }\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{unsigned char}]{color2\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Desenha um gradiente horizontal na imagem.
+
+Desenha um gradiente horizontal na imagem, com a cor 1 começando na esquerda e indo até a cor 2, na direita. O gradiente tem formato retangular. 
+\begin{DoxyParams}{Parameters}
+{\em image} & Ponteiro para a imagem na qual o gradiente deve ser desenhado. \\
+\hline
+{\em x0} & Coordenada x do ponto superior esquerdo. \\
+\hline
+{\em y0} & Coordenada y do ponto superior esquerdo. \\
+\hline
+{\em color1} & Cor inicial da esquerda. \\
+\hline
+{\em x1} & Coordenada x do ponto inferior direito. \\
+\hline
+{\em y1} & Coordenada y do ponto inferior direito. \\
+\hline
+{\em color2} & Cor final da direita. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_painter_a2d00b88bd2bfbd7d26c9af58ade4a067}\label{class_painter_a2d00b88bd2bfbd7d26c9af58ade4a067} 
+\index{Painter@{Painter}!get\_blank\_canvas@{get\_blank\_canvas}}
+\index{get\_blank\_canvas@{get\_blank\_canvas}!Painter@{Painter}}
+\doxysubsubsection{\texorpdfstring{get\_blank\_canvas()}{get\_blank\_canvas()}}
+{\footnotesize\ttfamily CImg$<$ unsigned char $>$ Painter\+::get\+\_\+blank\+\_\+canvas (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{unsigned char}]{color\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Gera uma imagem vazia, com a cor de fundo desejada.
+
+Gera uma imagem vazia, com a cor de fundo desejada. 
+\begin{DoxyParams}{Parameters}
+{\em width} & Largura da imagem. \\
+\hline
+{\em height} & Altura da imagem. \\
+\hline
+{\em color} & Cor de fundo da imagem. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Struct de imagem do CImg. 
+\end{DoxyReturn}
+\Hypertarget{class_painter_a1f650d0607fbe2c1bd493b1eb4ced6d6}\label{class_painter_a1f650d0607fbe2c1bd493b1eb4ced6d6} 
+\index{Painter@{Painter}!save@{save}}
+\index{save@{save}!Painter@{Painter}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Painter\+::save (\begin{DoxyParamCaption}\item[{CImg$<$ unsigned char $>$}]{image,  }\item[{string}]{title }\end{DoxyParamCaption})}
+
+Salva uma imagem em formato bmp.
+
+Salva uma imagem em formato bmp. 
+\begin{DoxyParams}{Parameters}
+{\em image} & Imagem a ser salva. \\
+\hline
+{\em title} & Título do arquivo da imagem. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documentos/\+UFSCAR/\+ComputaÃ§Ã£o GrÃ¡fica/\+Projetos/\+Atividade01/src/painter.\+h\item 
+E\+:/\+Documentos/\+UFSCAR/\+ComputaÃ§Ã£o GrÃ¡fica/\+Projetos/\+Atividade01/src/painter.\+cpp\end{DoxyCompactItemize}
