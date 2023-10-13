@@ -1,0 +1,1 @@
+Para rodar os testes, foi utilizada a biblioteca [Catch2](https://github.com/catchorg/Catch2), instalada via vcpkg.
