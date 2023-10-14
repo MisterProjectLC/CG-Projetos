@@ -97,6 +97,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Mat2_Tests.hpp" />
+    <ClInclude Include="Mat3_Tests.hpp" />
+    <ClInclude Include="Mat4_Tests.hpp" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Vec2_Tests.hpp" />
     <ClInclude Include="Vec3_Tests.hpp" />
