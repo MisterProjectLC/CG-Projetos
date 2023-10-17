@@ -111,6 +111,17 @@ inline vec3 operator/(vec3 v, double t) {
     return (1 / t) * v;
 }
 
+inline bool operator==(const vec3& v1, const vec3& v2)
+{
+    return (v1.e[0] == v2.e[0] && v1.e[1] == v2.e[1] && v1.e[2] == v2.e[2]);
+}
+
+inline bool operator!=(const vec3& v1, const vec3& v2)
+{
+    return !(v1 == v2);
+}
+
+
 /// Retorna a multiplicação escalar entre dois vetores.
 inline double dot(const vec3& u, const vec3& v) {
     return u.e[0] * v.e[0]
@@ -127,6 +138,9 @@ inline vec3 cross(const vec3& u, const vec3& v) {
 
 /// Retorna o vetor, com comprimento 1.
 inline vec3 unit_vector(vec3 v) {
+    double len = v.length();
+    if (len == 0)
+        return vec3();
     return v / v.length();
 }
 

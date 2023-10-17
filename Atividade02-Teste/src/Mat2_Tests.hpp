@@ -1,7 +1,7 @@
 #include "pch.h"
-#include "../Atividade02/src/mat2.h"
+#include "../../Atividade02/src/mat2.h"
 
-TEST(Atividade02_Testes, mat2_Teste_Construtor) {
+TEST(mat2_Testes, mat2_Construtor) {
     mat2 t = mat2();
     mat2 u = mat2(3, 4, 5, 6);
 
@@ -15,7 +15,15 @@ TEST(Atividade02_Testes, mat2_Teste_Construtor) {
     EXPECT_EQ(t[1][1], 0);
 }
 
-TEST(Atividade02_Testes, mat2_Teste_Operação) {
+TEST(mat2_Testes, mat2_Igualdade) {
+    EXPECT_EQ(mat2(), mat2(0, 0, 0, 0));
+    EXPECT_NE(mat2(), mat2(1, 0, 0, 0));
+    EXPECT_NE(mat2(), mat2(0, 1, 0, 0));
+    EXPECT_NE(mat2(), mat2(0, 0, 1, 0));
+    EXPECT_NE(mat2(), mat2(0, 0, 0, 1));
+}
+
+TEST(mat2_Testes, mat2_Operação) {
     mat2 t = mat2();
     mat2 u = mat2(3, 4, 5, 6);
     mat2 v = mat2(10, 20, 30, 40);

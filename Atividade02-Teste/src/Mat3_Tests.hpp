@@ -1,7 +1,7 @@
 #include "pch.h"
-#include "../Atividade02/src/mat3.h"
+#include "../../Atividade02/src/mat3.h"
 
-TEST(Atividade02_Testes, mat3_Teste_Construtor) {
+TEST(mat3_Testes, mat3_Construtor) {
     mat3 t = mat3();
 
     EXPECT_EQ(t.e[0][0], 0);
@@ -16,7 +16,17 @@ TEST(Atividade02_Testes, mat3_Teste_Construtor) {
     EXPECT_EQ(t[2][2], 0);
 }
 
-TEST(Atividade02_Testes, mat3_Teste_Operação) {
+TEST(mat3_Testes, mat3_Igualdade) {
+    EXPECT_EQ(mat3(), mat3(0, 0, 0, 0, 0, 0, 0, 0, 0));
+    EXPECT_NE(mat3(), mat3(1, 0, 0, 0, 0, 0, 0, 0, 0));
+    EXPECT_NE(mat3(), mat3(0, 0, 1, 0, 0, 0, 0, 0, 0));
+    EXPECT_NE(mat3(), mat3(0, 0, 0, 1, 0, 0, 0, 0, 0));
+    EXPECT_NE(mat3(), mat3(0, 0, 0, 0, 1, 0, 0, 0, 0));
+    EXPECT_NE(mat3(), mat3(0, 0, 0, 0, 0, 0, 1, 0, 0));
+    EXPECT_NE(mat3(), mat3(0, 0, 0, 0, 0, 0, 0, 1, 0));
+}
+
+TEST(mat3_Testes, mat3_Operação) {
     mat3 t = mat3();
     mat3 u = mat3(3, 4, 5, 3, 4, 5, 3, 4, 5);
     mat3 v = mat3(10, 10, 10, 20, 20, 20, 30, 30, 30);

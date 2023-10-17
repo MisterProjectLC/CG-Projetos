@@ -1,7 +1,7 @@
 #include "pch.h"
-#include "../Atividade02/src/vec4.h"
+#include "../../Atividade02/src/vec4.h"
 
-TEST(Atividade02_Testes, vec4_Teste_Construtor) {
+TEST(vec4_Testes, vec4_Construtor) {
     vec4 t = vec4();
     vec4 u = vec4(3, 4, 5, 6);
 
@@ -16,17 +16,22 @@ TEST(Atividade02_Testes, vec4_Teste_Construtor) {
     EXPECT_EQ(u.length(), sqrt(86));
 }
 
-TEST(Atividade02_Testes, vec4_Teste_Operação) {
+TEST(vec4_Testes, vec4_Igualdade) {
+    EXPECT_EQ(vec4(), vec4(0, 0, 0, 0));
+    EXPECT_NE(vec4(), vec4(1, 0, 0, 0));
+    EXPECT_NE(vec4(), vec4(0, 1, 0, 0));
+    EXPECT_NE(vec4(), vec4(0, 0, 1, 0));
+    EXPECT_NE(vec4(), vec4(0, 0, 0, 1));
+}
+
+TEST(vec4_Testes, vec4_Operação) {
     vec4 t = vec4();
     vec4 u = vec4(3, 4, 5, 6);
     vec4 v = vec4(10, 20, 30, 40);
     vec4 w = vec4(100, 0, 0, 0);
 
     t += v;
-    EXPECT_EQ(t[0], 10);
-    EXPECT_EQ(t[1], 20);
-    EXPECT_EQ(t[2], 30);
-    EXPECT_EQ(t[3], 40);
+    EXPECT_EQ(t, v);
 
     t *= 5;
     EXPECT_EQ(t[0], 50);
@@ -59,14 +64,12 @@ TEST(Atividade02_Testes, vec4_Teste_Operação) {
 }
 
 
-TEST(Atividade02_Testes, vec4_Teste_Função) {
+TEST(vec4_Testes, vec4_Função) {
     vec4 u = vec4(3, 4, 5, 6);
     vec4 v = vec4(10, 20, 30, 40);
     vec4 w = vec4(100, 0, 0, 0);
 
     EXPECT_EQ(dot(u, v), 500);
-    EXPECT_EQ(unit_vector(w)[0], 1);
-    EXPECT_EQ(unit_vector(w)[1], 0);
-    EXPECT_EQ(unit_vector(w)[2], 0);
-    EXPECT_EQ(unit_vector(w)[3], 0);
+    EXPECT_EQ(unit_vector(w), vec4(1, 0, 0, 0));
+    EXPECT_EQ(unit_vector(vec4()), vec4());
 }

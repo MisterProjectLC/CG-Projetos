@@ -1,7 +1,7 @@
 #include "pch.h"
-#include "../Atividade02/src/vec2.h"
+#include "../../Atividade02/src/vec2.h"
 
-TEST(Atividade02_Testes, Vec2_Teste_Construtor) {
+TEST(vec2_Testes, vec2_Construtor) {
     vec2 t = vec2();
     vec2 u = vec2(3, 4);
 
@@ -12,7 +12,13 @@ TEST(Atividade02_Testes, Vec2_Teste_Construtor) {
     EXPECT_EQ(u.length(), 5);
 }
 
-TEST(Atividade02_Testes, Vec2_Teste_Operação) {
+TEST(vec2_Testes, vec2_Igualdade) {
+    EXPECT_EQ(vec2(), vec2(0,0));
+    EXPECT_NE(vec2(), vec2(1, 0));
+    EXPECT_NE(vec2(), vec2(0, 1));
+}
+
+TEST(vec2_Testes, vec2_Operação) {
     vec2 t = vec2();
     vec2 u = vec2(3, 4);
     vec2 v = vec2(10, 20);
@@ -40,12 +46,13 @@ TEST(Atividade02_Testes, Vec2_Teste_Operação) {
 }
 
 
-TEST(Atividade02_Testes, Vec2_Teste_Função) {
+TEST(vec2_Testes, vec2_Função) {
     vec2 u = vec2(3, 4);
     vec2 v = vec2(10, 20);
     vec2 w = vec2(100, 0);
 
     EXPECT_EQ(dot(u, v), 110);
-    EXPECT_EQ(unit_vector(w)[0], 1);
-    EXPECT_EQ(unit_vector(w)[1], 0);
+    EXPECT_EQ(unit_vector(w), vec2(1, 0));
+    EXPECT_EQ(unit_vector(vec2()), vec2());
+
 }

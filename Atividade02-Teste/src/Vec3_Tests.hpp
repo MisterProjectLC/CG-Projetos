@@ -1,7 +1,7 @@
 #include "pch.h"
-#include "../Atividade02/src/vec3.h"
+#include "../../Atividade02/src/vec3.h"
 
-TEST(Atividade02_Testes, vec3_Teste_Construtor) {
+TEST(vec3_Testes, vec3_Construtor) {
     vec3 t = vec3();
     vec3 u = vec3(3, 4, 5);
 
@@ -14,7 +14,14 @@ TEST(Atividade02_Testes, vec3_Teste_Construtor) {
     EXPECT_EQ(u.length(), sqrt(50));
 }
 
-TEST(Atividade02_Testes, vec3_Teste_Operação) {
+TEST(vec3_Testes, vec3_Igualdade) {
+    EXPECT_EQ(vec3(), vec3(0, 0, 0));
+    EXPECT_NE(vec3(), vec3(1, 0, 0));
+    EXPECT_NE(vec3(), vec3(0, 1, 0));
+    EXPECT_NE(vec3(), vec3(0, 0, 1));
+}
+
+TEST(vec3_Testes, vec3_Operação) {
     vec3 t = vec3();
     vec3 u = vec3(3, 4, 5);
     vec3 v = vec3(10, 20, 30);
@@ -51,13 +58,13 @@ TEST(Atividade02_Testes, vec3_Teste_Operação) {
 }
 
 
-TEST(Atividade02_Testes, vec3_Teste_Função) {
+
+TEST(vec3_Testes, vec3_Função) {
     vec3 u = vec3(3, 4, 5);
     vec3 v = vec3(10, 20, 30);
     vec3 w = vec3(100, 0, 0);
 
     EXPECT_EQ(dot(u, v), 260);
-    EXPECT_EQ(unit_vector(w)[0], 1);
-    EXPECT_EQ(unit_vector(w)[1], 0);
-    EXPECT_EQ(unit_vector(w)[2], 0);
+    EXPECT_EQ(unit_vector(w), vec3(1, 0, 0));
+    EXPECT_EQ(unit_vector(vec3()), vec3());
 }

@@ -47,6 +47,7 @@ public:
     }
 
     /// Divisão dos elementos do vetor com um valor específico.
+    // NÃO checa divisão por zero.
     mat2& operator/=(double t) {
         return *this *= 1 / t;
     }
@@ -80,6 +81,16 @@ inline mat2 operator*(const mat2& v, double t) {
 
 inline mat2 operator/(mat2 v, double t) {
     return (1 / t) * v;
+}
+
+inline bool operator==(const mat2& m1, const mat2& m2)
+{
+    return (m1[0] == m2[0] && m1[1] == m2[1]);
+}
+
+inline bool operator!=(const mat2& m1, const mat2& m2)
+{
+    return !(m1 == m2);
 }
 
 inline double dot_h(const mat2& u, const mat2& v, int i, int j) {

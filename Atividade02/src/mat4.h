@@ -118,6 +118,16 @@ inline mat4 operator/(mat4 v, double t) {
     return (1 / t) * v;
 }
 
+inline bool operator==(const mat4& m1, const mat4& m2)
+{
+    return (m1[0] == m2[0] && m1[1] == m2[1] && m1[2] == m2[2] && m1[3] == m2[3]);
+}
+
+inline bool operator!=(const mat4& m1, const mat4& m2)
+{
+    return !(m1 == m2);
+}
+
 inline double dot_h(const mat4& u, const mat4& v, int i, int j) {
     return u.e[i][0] * v.e[0][j] + u.e[i][1] * v.e[1][j] + u.e[i][2] * v.e[2][j] + u.e[i][3] * v.e[3][j];
 }

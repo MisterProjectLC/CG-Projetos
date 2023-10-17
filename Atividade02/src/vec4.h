@@ -110,6 +110,16 @@ inline vec4 operator/(vec4 v, double t) {
     return (1 / t) * v;
 }
 
+inline bool operator==(const vec4& v1, const vec4& v2)
+{
+    return (v1.e[0] == v2.e[0] && v1.e[1] == v2.e[1] && v1.e[2] == v2.e[2] && v1.e[3] == v2.e[3]);
+}
+
+inline bool operator!=(const vec4& v1, const vec4& v2)
+{
+    return !(v1 == v2);
+}
+
 /// Retorna a multiplicação escalar entre dois vetores.
 inline double dot(const vec4& u, const vec4& v) {
     return u.e[0] * v.e[0]
@@ -120,6 +130,9 @@ inline double dot(const vec4& u, const vec4& v) {
 
 /// Retorna o vetor, com comprimento 1.
 inline vec4 unit_vector(vec4 v) {
+    double len = v.length();
+    if (len == 0)
+        return vec4();
     return v / v.length();
 }
 
