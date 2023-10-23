@@ -108,6 +108,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\face.cpp" />
     <ClCompile Include="src\model.cpp" />
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
@@ -138,6 +140,7 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\face.h" />
     <ClInclude Include="src\model.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

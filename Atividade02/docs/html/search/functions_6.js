@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_0',['y',['../classvec2.html#a9fa1acc7d8e1de30e62cc0c0ecc8151c',1,'vec2::y()'],['../classvec3.html#a83d2fd06769d2993a94720f5fed1135b',1,'vec3::y()'],['../classvec4.html#adce71e1986b04f4245efcf6e3e84ef59',1,'vec4::y()']]]
+  ['x_0',['x',['../classvec2.html#abc51f5fd08c348ba584bedaedcbb88db',1,'vec2::x()'],['../classvec3.html#a6c771306ba110c6fc430ff08b7b188a5',1,'vec3::x()'],['../classvec4.html#a25d847358270626b627d4a61923f3cbe',1,'vec4::x()']]]
 ];

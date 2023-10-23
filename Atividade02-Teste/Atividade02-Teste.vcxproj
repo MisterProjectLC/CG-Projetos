@@ -96,17 +96,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Mat2_Tests.hpp" />
-    <ClInclude Include="Mat3_Tests.hpp" />
-    <ClInclude Include="Mat4_Tests.hpp" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="Vec2_Tests.hpp" />
-    <ClInclude Include="Vec3_Tests.hpp" />
-    <ClInclude Include="Vec4_Tests.hpp" />
+    <ClInclude Include="src\Mat2_Tests.hpp" />
+    <ClInclude Include="src\Mat3_Tests.hpp" />
+    <ClInclude Include="src\Mat4_Tests.hpp" />
+    <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\Vec2_Tests.hpp" />
+    <ClInclude Include="src\Vec3_Tests.hpp" />
+    <ClInclude Include="src\Vec4_Tests.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp" />
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="src\test.cpp" />
+    <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -114,7 +114,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="src\packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

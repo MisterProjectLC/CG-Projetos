@@ -65,6 +65,7 @@ TEST(vec3_Testes, vec3_Função) {
     vec3 w = vec3(100, 0, 0);
 
     EXPECT_EQ(dot(u, v), 260);
+    EXPECT_EQ(u.to_string(), "3.000000 4.000000 5.000000");
     EXPECT_EQ(unit_vector(w), vec3(1, 0, 0));
     EXPECT_EQ(unit_vector(vec3()), vec3());
 }

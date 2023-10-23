@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Atividade02: E:/Documentos/UFSCAR/ComputaÃ§Ã£o GrÃ¡fica/Projetos/Atividade02/src/mat3.h Source File</title>
+<title>Atividade02: mat3.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -51,6 +51,7 @@ $(function() {
 $(document).ready(function() { init_codefold(0); });
 /* @license-end */
 </script>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -72,11 +73,6 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">mat3.h</div></div>
 </div><!--header-->
@@ -178,17 +174,27 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">return</span> (1 / t) * v;</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keyword">inline</span> <a class="code hl_class" href="classmat3.html">mat3</a> dot(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a>&amp; u, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a>&amp; v) {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classmat3.html">mat3</a>(dot_h(u, v, 0, 0), dot_h(u, v, 0, 1), dot_h(u, v, 0, 2),</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        dot_h(u, v, 1, 0), dot_h(u, v, 1, 1), dot_h(u, v, 1, 2), </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        dot_h(u, v, 2, 0), dot_h(u, v, 2, 1), dot_h(u, v, 2, 2));</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>}</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keyword">inline</span> <span class="keywordtype">double</span> dot_h(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a>&amp; u, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a>&amp; v, <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">return</span> u.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[i][0] * v.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][j] + u.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[i][1] * v.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][j] + u.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[i][2] * v.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][j];</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a>&amp; m1, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a>&amp; m2)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>{</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">return</span> (m1[0] == m2[0] &amp;&amp; m1[1] == m2[1] &amp;&amp; m1[2] == m2[2]);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a>&amp; m1, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a>&amp; m2)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>{</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">return</span> !(m1 == m2);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keyword">inline</span> <span class="keywordtype">double</span> dot_h(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a>&amp; u, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a>&amp; v, <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">return</span> u.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[i][0] * v.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][j] + u.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[i][1] * v.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][j] + u.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[i][2] * v.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][j];</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword">inline</span> <a class="code hl_class" href="classmat3.html">mat3</a> dot(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a>&amp; u, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a>&amp; v) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classmat3.html">mat3</a>(dot_h(u, v, 0, 0), dot_h(u, v, 0, 1), dot_h(u, v, 0, 2),</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        dot_h(u, v, 1, 0), dot_h(u, v, 1, 1), dot_h(u, v, 1, 2), </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        dot_h(u, v, 2, 0), dot_h(u, v, 2, 1), dot_h(u, v, 2, 2));</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassmat3_html"><div class="ttname"><a href="classmat3.html">mat3</a></div><div class="ttdef"><b>Definition</b> mat3.h:11</div></div>
 <div class="ttc" id="aclassmat3_html_a319d0ef3acc68daac58cf5d68375d1e6"><div class="ttname"><a href="classmat3.html#a319d0ef3acc68daac58cf5d68375d1e6">mat3::operator-</a></div><div class="ttdeci">mat3 operator-() const</div><div class="ttdoc">Retorna a matriz negativa.</div><div class="ttdef"><b>Definition</b> mat3.h:34</div></div>
 <div class="ttc" id="aclassmat3_html_a463027040addb1c56fe84c91b74b8d79"><div class="ttname"><a href="classmat3.html#a463027040addb1c56fe84c91b74b8d79">mat3::mat3</a></div><div class="ttdeci">mat3()</div><div class="ttdoc">Construtor simples.</div><div class="ttdef"><b>Definition</b> mat3.h:17</div></div>
@@ -198,7 +204,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassmat3_html_a994ae0dddd51daaf92fa46d375e2eb8b"><div class="ttname"><a href="classmat3.html#a994ae0dddd51daaf92fa46d375e2eb8b">mat3::operator+=</a></div><div class="ttdeci">mat3 &amp; operator+=(const mat3 &amp;v)</div><div class="ttdoc">Soma com outra matriz.</div><div class="ttdef"><b>Definition</b> mat3.h:42</div></div>
 <div class="ttc" id="aclassmat3_html_ab2eb2daa5190ce3fb2d465ac2a0fcac1"><div class="ttname"><a href="classmat3.html#ab2eb2daa5190ce3fb2d465ac2a0fcac1">mat3::mat3</a></div><div class="ttdeci">mat3(double e0, double e1, double e2, double f0, double f1, double f2, double g0, double g1, double g2)</div><div class="ttdef"><b>Definition</b> mat3.h:29</div></div>
 <div class="ttc" id="aclassmat3_html_addda74746fd3055e1a015089b1e0256d"><div class="ttname"><a href="classmat3.html#addda74746fd3055e1a015089b1e0256d">mat3::operator*=</a></div><div class="ttdeci">mat3 &amp; operator*=(double t)</div><div class="ttdoc">Multiplicação dos elementos do vetor com um valor específico.</div><div class="ttdef"><b>Definition</b> mat3.h:50</div></div>
-<div class="ttc" id="aclassvec3_html"><div class="ttname"><a href="classvec3.html">vec3</a></div><div class="ttdef"><b>Definition</b> vec3.h:11</div></div>
+<div class="ttc" id="aclassvec3_html"><div class="ttname"><a href="classvec3.html">vec3</a></div><div class="ttdef"><b>Definition</b> vec3.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

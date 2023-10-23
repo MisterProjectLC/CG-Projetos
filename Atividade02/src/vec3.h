@@ -3,8 +3,10 @@
 
 #include <cmath>
 #include <iostream>
+#include <string>
 
 using std::sqrt;
+using namespace std;
 
 /// Classe representando vetores de 3 dimensões. Obtida diretamente do tutorial de Raytracing.
 /// https://raytracing.github.io/books/RayTracingInOneWeekend.html?authuser=1
@@ -67,6 +69,11 @@ public:
     /// Retorna o comprimento do vetor, elevado ao quadrado.
     double length_squared() const {
         return e[0] * e[0] + e[1] * e[1] + e[2] * e[2];
+    }
+
+    /// Retorna uma versão impressa do vetor.
+    string to_string() {
+        return std::to_string(e[0]) + " " + std::to_string(e[1]) + " " + std::to_string(e[2]);
     }
 };
 

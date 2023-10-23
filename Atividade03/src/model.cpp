@@ -14,17 +14,17 @@ vec3 Model::create_point(string line) {
 }
 
 
-vector<int> Model::create_face(string line) {
+Face Model::create_face(string line) {
     size_t pos = 0;
     int index = 0;
-    vector<int> returned;
+    vector<vec3> returned;
     while ((pos = line.find(delimiter)) != string::npos) {
-        returned.push_back(stoi(line.substr(0, pos)));
+        returned.push_back(points[stoi(line.substr(0, pos))-1]);
         line.erase(0, pos + delimiter.length());
         index++;
     }
-    returned.push_back(stoi(line.substr(0, pos)));
-    return returned;
+    returned.push_back(points[stoi(line.substr(0, pos)) - 1]);
+    return Face(returned);
 }
 
 
@@ -52,17 +52,26 @@ Model::Model(ifstream &obj_file) {
 }
 
 
+vec3 Model::get_point(int index) {
+    return points[index];
+}
+
+Face Model::get_face(int index) {
+    return faces[index];
+}
+
+
 string Model::print() {
     string s;
 
     s += "POINTS\n";
     for (int i = 0; i < points.size(); i++)
-        s += to_string(points[i][0]) + " " + to_string(points[i][1]) + " " + to_string(points[i][2]) + "\n";
+        s += points[i].to_string() + "\n";
 
     s += "FACES\n";
     for (int i = 0; i < faces.size(); i++) {
-        for (int j = 0; j < faces[i].size(); j++)
-            s += to_string(faces[i][j]) + " ";
+        for (int j = 0; j < faces[i].get_points().size(); j++)
+            s += faces[i].to_string() + " ";
         s += "\n";
     }
 
