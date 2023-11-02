@@ -2,6 +2,12 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+      <FullPath>E:\Documentos\UFSCAR\Computação Gráfica\Projetos\x64\Debug\Atividade01.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\Documentos\UFSCAR\Computação Gráfica\Projetos\x64\Debug\Atividade02.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>E:\Documentos\UFSCAR\Computação Gráfica\Projetos\x64\Debug\Atividade03.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>

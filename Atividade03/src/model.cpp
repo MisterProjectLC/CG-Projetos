@@ -77,3 +77,12 @@ string Model::print() {
 
     return s;
 }
+
+
+bool Model::hit(Ray ray) {
+    for (Face f : faces) {
+        if (f.hit(ray))
+            return true;
+    }
+    return false;
+}

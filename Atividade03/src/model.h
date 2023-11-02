@@ -4,6 +4,7 @@
 #include <fstream>
 #include <string>
 #include "face.h"
+#include "ray.h"
 
 using namespace std;
 
@@ -46,4 +47,9 @@ public:
 	/// @param index Índice da face a ser obtida.
 	/// @returns Face a ser obtida.
 	Face get_face(int index);
+
+	/// Retorna se dado raio acertou alguma face deste modelo.
+	/// @param ray Raio a ser testado.
+	/// @returns Se o raio acertou o modelo.
+	bool hit(Ray ray);
 };

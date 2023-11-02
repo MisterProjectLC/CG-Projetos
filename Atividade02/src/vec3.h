@@ -93,6 +93,16 @@ inline vec3 operator+(const vec3& u, const vec3& v) {
     return vec3(u.e[0] + v.e[0], u.e[1] + v.e[1], u.e[2] + v.e[2]);
 }
 
+/// Soma de vetor com valor.
+inline vec3 operator+(double t, const vec3& v) {
+    return vec3(t + v.e[0], t + v.e[1], t + v.e[2]);
+}
+
+/// Soma de vetor com valor.
+inline vec3 operator+(const vec3& v, double t) {
+    return t + v;
+}
+
 /// Subtração de dois vetores.
 inline vec3 operator-(const vec3& u, const vec3& v) {
     return vec3(u.e[0] - v.e[0], u.e[1] - v.e[1], u.e[2] - v.e[2]);
@@ -111,6 +121,11 @@ inline vec3 operator*(double t, const vec3& v) {
 /// Multiplicação de um valor com um vetor.
 inline vec3 operator*(const vec3& v, double t) {
     return t * v;
+}
+
+/// Divisão de dois vetores.
+inline vec3 operator/(const vec3& u, const vec3& v) {
+    return vec3(u.e[0] / v.e[0], u.e[1] / v.e[1], u.e[2] / v.e[2]);
 }
 
 /// Divisão de um vetor com um valor.

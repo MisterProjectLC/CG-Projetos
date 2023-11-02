@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>E:\Documentos\UFSCAR\Computação Gráfica\Projetos\x64\Debug\Atividade01.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\Documentos\UFSCAR\Computação Gráfica\Projetos\x64\Debug\Atividade02.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\Documentos\UFSCAR\Computação Gráfica\Projetos\x64\Debug\Atividade04.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>E:\Documentos\UFSCAR\Computação Gráfica\Projetos\Atividade03\data\icosahedron.obj</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Atividade03: Model Class Reference</title>
+<title>My Project: Model Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Atividade03
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -91,6 +91,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a978d92bfadd7c49265cfe376098d3e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69e3de9ad846fe8d9c4191289ee3bbb4" id="r_a69e3de9ad846fe8d9c4191289ee3bbb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_face.html">Face</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a69e3de9ad846fe8d9c4191289ee3bbb4">get_face</a> (int index)</td></tr>
 <tr class="separator:a69e3de9ad846fe8d9c4191289ee3bbb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d013dcec8565c85dbb98572b46bdab0" id="r_a5d013dcec8565c85dbb98572b46bdab0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a5d013dcec8565c85dbb98572b46bdab0">hit</a> (<a class="el" href="class_ray.html">Ray</a> ray)</td></tr>
+<tr class="separator:a5d013dcec8565c85dbb98572b46bdab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Classe representando um modelo tridimensional, formado por pontos e faces. </p>
@@ -167,6 +169,31 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Ponto a ser obtido. </dd></dl>
+
+</div>
+</div>
+<a id="a5d013dcec8565c85dbb98572b46bdab0" name="a5d013dcec8565c85dbb98572b46bdab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d013dcec8565c85dbb98572b46bdab0">&#9670;&#160;</a></span>hit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Model::hit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_ray.html">Ray</a>&#160;</td>
+          <td class="paramname"><em>ray</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retorna se dado raio acertou alguma face deste modelo. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ray</td><td>Raio a ser testado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Se o raio acertou o modelo. </dd></dl>
 
 </div>
 </div>
