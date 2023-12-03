@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>16.0</VCProjectVersion>
+    <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5d12b7d1-fd37-4984-b6d3-467550de0729}</ProjectGuid>
-    <RootNamespace>Atividade02</RootNamespace>
+    <ProjectGuid>{9f47d866-3430-48a2-9d7f-4eaa649456fb}</ProjectGuid>
+    <RootNamespace>Atividade05</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,24 +70,13 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -102,6 +91,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -116,6 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,6 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,18 +131,34 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\color.h" />
-    <ClInclude Include="src\global.h" />
-    <ClInclude Include="src\interval.h" />
-    <ClInclude Include="src\mat2.h" />
-    <ClInclude Include="src\mat3.h" />
-    <ClInclude Include="src\mat4.h" />
-    <ClInclude Include="src\vec2.h" />
-    <ClInclude Include="src\vec3.h" />
-    <ClInclude Include="src\vec4.h" />
+    <ClCompile Include="src\hittable_face.cpp" />
+    <ClCompile Include="src\hittable_model.cpp" />
+    <ClCompile Include="src\hittable_list.cpp" />
+    <ClCompile Include="src\camera.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\sphere.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Main.cpp" />
+    <ClInclude Include="src\hittable_face.h" />
+    <ClInclude Include="src\hittable_model.h" />
+    <ClInclude Include="src\hittable_list.h" />
+    <ClInclude Include="src\camera.h" />
+    <ClInclude Include="src\hittable.h" />
+    <ClInclude Include="src\sphere.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Atividade01\Atividade01.vcxproj">
+      <Project>{ec973c13-de7f-4d25-bf50-f1f958c02d71}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Atividade02\Atividade02.vcxproj">
+      <Project>{5d12b7d1-fd37-4984-b6d3-467550de0729}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Atividade03\Atividade03.vcxproj">
+      <Project>{2a847056-f286-40f5-b0fa-f273befc7945}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Atividade04\Atividade04.vcxproj">
+      <Project>{a8b93631-b0c9-461b-9b11-2617b32c48a8}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
