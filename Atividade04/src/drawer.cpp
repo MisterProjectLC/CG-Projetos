@@ -41,7 +41,7 @@ void Drawer::set_camera_pos(vec3 new_camera_pos) {
 
 
 void Drawer::draw(color pixel_color) {
-	write_color(*myfile, pixel_color);
+	write_color(*myfile, pixel_color, 10);
 }
 
 
@@ -54,9 +54,9 @@ void Drawer::draw(Face f, color face_color, color bg_color) {
             Ray r(camera_center, ray_direction);
 
             if (f.hit(r))
-                write_color(*myfile, face_color);
+                write_color(*myfile, face_color, 10);
             else
-                write_color(*myfile, bg_color);
+                write_color(*myfile, bg_color, 10);
         }
     }
     std::clog << "\rDone.                 \n";
@@ -72,9 +72,9 @@ void Drawer::draw(Model m, color model_color, color bg_color) {
             Ray r(camera_center, ray_direction);
 
             if (m.hit(r))
-                write_color(*myfile, model_color);
+                write_color(*myfile, model_color, 10);
             else
-                write_color(*myfile, bg_color);
+                write_color(*myfile, bg_color, 10);
         }
     }
     std::clog << "\rDone.                 \n";

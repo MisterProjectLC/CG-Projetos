@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['vec2_0',['vec2',['../classvec2.html',1,'']]],
-  ['vec3_1',['vec3',['../classvec3.html',1,'']]],
-  ['vec4_2',['vec4',['../classvec4.html',1,'']]]
+  ['mat2_0',['mat2',['../classmat2.html',1,'']]],
+  ['mat3_1',['mat3',['../classmat3.html',1,'']]],
+  ['mat4_2',['mat4',['../classmat4.html',1,'']]]
 ];

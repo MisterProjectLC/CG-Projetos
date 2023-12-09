@@ -1,11 +1,12 @@
+#ifndef DRAWER_H
+#define DRAWER_H
+
 #include <string>
 #include <fstream>
 #include "Atividade02/src/color.h"
 #include "Atividade03/src/model.h"
 
 using namespace std;
-
-#pragma once
 
 
 /// Classe para desenhar e salvar imagens. Utiliza a biblioteca CImg.
@@ -69,4 +70,6 @@ public:
 
 
 };
+
+#endif
 
