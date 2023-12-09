@@ -42,7 +42,7 @@ void Camera::initialize() {
 
     // Calculate the location of the upper left pixel.
     auto viewport_upper_left =
-        center - vec3(0, 0, focal_length) - viewport_u / 2 - viewport_v / 2;
+        - vec3(0, 0, focal_length) - viewport_u / 2 - viewport_v / 2;
     pixel00_loc = viewport_upper_left + 0.5 * (pixel_delta_u + pixel_delta_v);
 }
 

@@ -86,10 +86,13 @@ bool HittableModel::hit(const Ray& r, Interval ray_t, HitRecord& rec) const {
         double lowest_t = infinity;
 
         HitRecord this_rec;
-        if (f.hit(r, ray_t, this_rec) and this_rec.t < lowest_t) {
+        if (f.hit(r, ray_t, this_rec)) {
             rec.set_t(r, this_rec.t);
             rec.set_face_normal(r, this_rec.normal);
+
+            ray_t.max = rec.t;
             hit_smth = true;
+            rec = this_rec;
         }
     }
 

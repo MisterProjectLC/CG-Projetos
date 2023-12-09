@@ -38,13 +38,23 @@ private:
     vec3   pixel_delta_v;  // Offset to pixel below
     std::ofstream* file;
 
-
+    /// Inicializa a câmera
     void initialize();
 
+    /// Lança um Raio na direção dada pelas coordenadas de entrada.
+    /// @param Coordenada X da tela para o Raio.
+    /// @param Coordenada Y da tela para o Raio. 
+    /// @returns O raio lançado.
     Ray get_ray(int i, int j) const;
 
+    /// Retorna um ponto aleatório no quadrado cercando um dado pixel.
     vec3 pixel_sample_square() const;
 
+    /// Retorna a cor obtida pelo raio lançado no mundo dado.
+    /// @param r Raio a ser lançado.
+    /// @param depth Quantidade de bounces de raio.
+    /// @param world Objeto(s) a ser testado.
+    /// @returns Cor obtida.
     color ray_color(const Ray& r, int depth, const Hittable& world) const;
 };
 
