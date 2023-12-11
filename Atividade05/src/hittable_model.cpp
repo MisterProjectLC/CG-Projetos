@@ -1,8 +1,10 @@
 #include "hittable_model.h"
 
 
-HittableModel::HittableModel(ifstream& obj_file) {
+HittableModel::HittableModel(ifstream& obj_file, shared_ptr<Material> _material) {
     string myline;
+    mat = _material;
+
     if (!obj_file.is_open())
         return;
 
@@ -49,7 +51,7 @@ HittableFace HittableModel::create_face(string line) {
         index++;
     }
     returned.push_back(points[stoi(line.substr(0, pos)) - 1]);
-    return HittableFace(returned);
+    return HittableFace(returned, mat);
 }
 
 

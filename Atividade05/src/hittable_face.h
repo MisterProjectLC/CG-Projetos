@@ -11,10 +11,11 @@ private:
 	vector<vec3> points;
 	vec3 w;
 	vec3 normal;
+	shared_ptr<Material> mat;
 
 public:
 	// Construtor de uma face, dado seus pontos.
-	HittableFace(vector<vec3> points);
+	HittableFace(vector<vec3> points, shared_ptr<Material> _material);
 
 	/// Retorna os pontos da face.
 	vector<vec3> get_points();

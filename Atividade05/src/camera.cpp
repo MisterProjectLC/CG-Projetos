@@ -75,8 +75,11 @@ color Camera::ray_color(const Ray& r, int depth, const Hittable& world) const {
     // Hittable
     HitRecord rec;
     if (world.hit(r, Interval(0.001, infinity), rec)) {
-        vec3 direction = rec.normal + random_unit_vector();
-        return 0.5 * ray_color(Ray(rec.p, direction), depth-1, world);
+        Ray scattered;
+        color attenuation;
+        if (rec.mat->scatter(r, rec, attenuation, scattered))
+            return attenuation * ray_color(scattered, depth - 1, world);
+        return color(0, 0, 0);
     }
 
     // Sky

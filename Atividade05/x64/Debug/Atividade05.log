@@ -1,2 +1,9 @@
-﻿  camera.cpp
-  Atividade05.vcxproj -> E:\Documentos\UFSCAR\Computação Gráfica\Projetos\x64\Debug\Atividade05.exe
+﻿  Main.cpp
+  camera.cpp
+  hittable_face.cpp
+  hittable_list.cpp
+  hittable_model.cpp
+  material.cpp
+  sphere.cpp
+  Gerando Código...
+  Atividade05.vcxproj -> E:\Documentos\UFSCAR\Computação Gráfica\Projetos\x64\Debug\Atividade05.lib

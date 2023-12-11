@@ -1,6 +1,6 @@
-﻿  face.cpp
+﻿  Main.cpp
+  face.cpp
   model.cpp
-  Main.cpp
   ray.cpp
   Gerando Código...
   Atividade03.vcxproj -> E:\Documentos\UFSCAR\Computação Gráfica\Projetos\x64\Debug\Atividade03.lib

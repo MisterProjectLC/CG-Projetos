@@ -4,6 +4,7 @@
 #include <fstream>
 
 #include "hittable.h"
+#include "material.h"
 #include "Atividade02/src/global.h"
 #include "Atividade02/src/color.h"
 #include "Atividade02/src/interval.h"

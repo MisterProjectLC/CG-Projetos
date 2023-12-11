@@ -15,6 +15,8 @@ private:
 	vector<vec3> points;
 	/// Vetor das faces do modelo.
 	vector<HittableFace> faces;
+	/// Material do modelo.
+	shared_ptr<Material> mat;
 
 	/// Delimitador de leitura para o arquivo .obj.
 	string delimiter = "  ";
@@ -31,7 +33,8 @@ private:
 public:
 	/// Construtor do modelo.
 	/// @param obj_file Stream de um arquivo .obj.
-	HittableModel(ifstream& obj_file);
+	/// @param _material Material do modelo.
+	HittableModel(ifstream& obj_file, shared_ptr<Material> _material);
 
 	/// Retorna um texto de impressão com a lista de pontos e faces do modelo.
 	/// @returns Texto de impressão.

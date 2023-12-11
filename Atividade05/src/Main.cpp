@@ -7,10 +7,12 @@ using namespace std;
 
 
 int main() {
+    auto material_ground = make_shared<Lambertian>(color(0.8, 0.8, 0.0));
+
     // Generate sphere
     HittableList world;
-    world.add(make_shared<Sphere>(point3(0, 0, -1), 0.5));
-    world.add(make_shared<Sphere>(point3(0, -100.5, -1), 100));
+    world.add(make_shared<Sphere>(point3(0, 0, -1), 0.5, material_ground));
+    world.add(make_shared<Sphere>(point3(0, -100.5, -1), 100, material_ground));
 
     std::ofstream mfile;
     mfile.open("sphere_normal_image.ppm");
@@ -27,9 +29,9 @@ int main() {
     ifstream myfile(".\\data\\icosahedron.obj");
 
     HittableList world2;
-    world2.add(make_shared<HittableModel>(myfile));
-    world2.add(make_shared<Sphere>(point3(-1.2, 0.1, 0.8), 0.5));
-    world2.add(make_shared<Sphere>(point3(0, -100.5, -1), 100));
+    world2.add(make_shared<HittableModel>(myfile, material_ground));
+    world2.add(make_shared<Sphere>(point3(-1.2, 0.1, 0.8), 0.5, material_ground));
+    world2.add(make_shared<Sphere>(point3(0, -100.5, -1), 100, material_ground));
 
     std::ofstream mfile2;
     mfile2.open("three_objects_image_angle1.ppm");

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['print_0',['print',['../class_hittable_model.html#ab08b860852d56bdbd280d275d494a5ae',1,'HittableModel']]]
+  ['lambertian_0',['lambertian',['../class_lambertian.html',1,'Lambertian'],['../class_lambertian.html#a1e86fe55fef898bc4bf5f5b8173444f3',1,'Lambertian::Lambertian()']]]
 ];

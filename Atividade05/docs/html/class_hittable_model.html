@@ -87,8 +87,8 @@ Inheritance diagram for HittableModel:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab742c59f420561ede0fccc6d9121e01a" id="r_ab742c59f420561ede0fccc6d9121e01a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hittable_model.html#ab742c59f420561ede0fccc6d9121e01a">HittableModel</a> (ifstream &amp;obj_file)</td></tr>
-<tr class="separator:ab742c59f420561ede0fccc6d9121e01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02529ff19e677795e9f1511589723a91" id="r_a02529ff19e677795e9f1511589723a91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hittable_model.html#a02529ff19e677795e9f1511589723a91">HittableModel</a> (ifstream &amp;obj_file, shared_ptr&lt; <a class="el" href="class_material.html">Material</a> &gt; _material)</td></tr>
+<tr class="separator:a02529ff19e677795e9f1511589723a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab08b860852d56bdbd280d275d494a5ae" id="r_ab08b860852d56bdbd280d275d494a5ae"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hittable_model.html#ab08b860852d56bdbd280d275d494a5ae">print</a> ()</td></tr>
 <tr class="separator:ab08b860852d56bdbd280d275d494a5ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a612874397545c2dc32f7d0a12d85fa09" id="r_a612874397545c2dc32f7d0a12d85fa09"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hittable_model.html#a612874397545c2dc32f7d0a12d85fa09">get_point</a> (int index)</td></tr>
@@ -99,8 +99,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a93384da7f02b1ff5f6f184bc81fdc426"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab742c59f420561ede0fccc6d9121e01a" name="ab742c59f420561ede0fccc6d9121e01a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab742c59f420561ede0fccc6d9121e01a">&#9670;&#160;</a></span>HittableModel()</h2>
+<a id="a02529ff19e677795e9f1511589723a91" name="a02529ff19e677795e9f1511589723a91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02529ff19e677795e9f1511589723a91">&#9670;&#160;</a></span>HittableModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -109,14 +109,25 @@ Public Member Functions</h2></td></tr>
           <td class="memname">HittableModel::HittableModel </td>
           <td>(</td>
           <td class="paramtype">ifstream &amp;&#160;</td>
-          <td class="paramname"><em>obj_file</em></td><td>)</td>
+          <td class="paramname"><em>obj_file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="class_material.html">Material</a> &gt;&#160;</td>
+          <td class="paramname"><em>_material</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Construtor do modelo. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">obj_file</td><td>Stream de um arquivo .obj. </td></tr>
+    <tr><td class="paramname">_material</td><td><a class="el" href="class_material.html">Material</a> do modelo. </td></tr>
   </table>
   </dd>
 </dl>

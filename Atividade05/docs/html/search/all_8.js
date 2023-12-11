@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['to_5fstring_0',['to_string',['../class_hittable_face.html#a1caec308648120bba5cb47307fb7333b',1,'HittableFace']]]
+  ['print_0',['print',['../class_hittable_model.html#ab08b860852d56bdbd280d275d494a5ae',1,'HittableModel']]]
 ];

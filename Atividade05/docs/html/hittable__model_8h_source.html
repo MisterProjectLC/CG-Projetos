@@ -97,33 +97,34 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    vector&lt;vec3&gt; points;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    vector&lt;HittableFace&gt; faces;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">string</span> delimiter = <span class="stringliteral">&quot;  &quot;</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    vec3 create_point(<span class="keywordtype">string</span> line);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_class" href="class_hittable_face.html">HittableFace</a> create_face(<span class="keywordtype">string</span> line);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="class_hittable_model.html">HittableModel</a>(ifstream&amp; obj_file);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_hittable_model.html#ab08b860852d56bdbd280d275d494a5ae">print</a>();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    vec3 <a class="code hl_function" href="class_hittable_model.html#a612874397545c2dc32f7d0a12d85fa09">get_point</a>(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_class" href="class_hittable_face.html">HittableFace</a> <a class="code hl_function" href="class_hittable_model.html#a7c151289061b002b20f470901a07d494">get_face</a>(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_hittable_model.html#a93384da7f02b1ff5f6f184bc81fdc426">hit</a>(<span class="keyword">const</span> Ray&amp; r, Interval ray_t, <a class="code hl_class" href="class_hit_record.html">HitRecord</a>&amp; rec) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    shared_ptr&lt;Material&gt; mat;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">string</span> delimiter = <span class="stringliteral">&quot;  &quot;</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    vec3 create_point(<span class="keywordtype">string</span> line);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_class" href="class_hittable_face.html">HittableFace</a> create_face(<span class="keywordtype">string</span> line);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_class" href="class_hittable_model.html">HittableModel</a>(ifstream&amp; obj_file, shared_ptr&lt;Material&gt; _material);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_hittable_model.html#ab08b860852d56bdbd280d275d494a5ae">print</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    vec3 <a class="code hl_function" href="class_hittable_model.html#a612874397545c2dc32f7d0a12d85fa09">get_point</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_class" href="class_hittable_face.html">HittableFace</a> <a class="code hl_function" href="class_hittable_model.html#a7c151289061b002b20f470901a07d494">get_face</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_hittable_model.html#a93384da7f02b1ff5f6f184bc81fdc426">hit</a>(<span class="keyword">const</span> Ray&amp; r, Interval ray_t, <a class="code hl_class" href="class_hit_record.html">HitRecord</a>&amp; rec) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
 </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="ttc" id="aclass_hit_record_html"><div class="ttname"><a href="class_hit_record.html">HitRecord</a></div><div class="ttdef"><b>Definition</b> hittable.h:7</div></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="ttc" id="aclass_hit_record_html"><div class="ttname"><a href="class_hit_record.html">HitRecord</a></div><div class="ttdef"><b>Definition</b> hittable.h:10</div></div>
 <div class="ttc" id="aclass_hittable_face_html"><div class="ttname"><a href="class_hittable_face.html">HittableFace</a></div><div class="ttdef"><b>Definition</b> hittable_face.h:9</div></div>
-<div class="ttc" id="aclass_hittable_html"><div class="ttname"><a href="class_hittable.html">Hittable</a></div><div class="ttdef"><b>Definition</b> hittable.h:35</div></div>
+<div class="ttc" id="aclass_hittable_html"><div class="ttname"><a href="class_hittable.html">Hittable</a></div><div class="ttdef"><b>Definition</b> hittable.h:39</div></div>
 <div class="ttc" id="aclass_hittable_model_html"><div class="ttname"><a href="class_hittable_model.html">HittableModel</a></div><div class="ttdef"><b>Definition</b> hittable_model.h:12</div></div>
-<div class="ttc" id="aclass_hittable_model_html_a612874397545c2dc32f7d0a12d85fa09"><div class="ttname"><a href="class_hittable_model.html#a612874397545c2dc32f7d0a12d85fa09">HittableModel::get_point</a></div><div class="ttdeci">vec3 get_point(int index)</div><div class="ttdef"><b>Definition</b> hittable_model.cpp:56</div></div>
-<div class="ttc" id="aclass_hittable_model_html_a7c151289061b002b20f470901a07d494"><div class="ttname"><a href="class_hittable_model.html#a7c151289061b002b20f470901a07d494">HittableModel::get_face</a></div><div class="ttdeci">HittableFace get_face(int index)</div><div class="ttdef"><b>Definition</b> hittable_model.cpp:60</div></div>
-<div class="ttc" id="aclass_hittable_model_html_a93384da7f02b1ff5f6f184bc81fdc426"><div class="ttname"><a href="class_hittable_model.html#a93384da7f02b1ff5f6f184bc81fdc426">HittableModel::hit</a></div><div class="ttdeci">bool hit(const Ray &amp;r, Interval ray_t, HitRecord &amp;rec) const override</div><div class="ttdef"><b>Definition</b> hittable_model.cpp:83</div></div>
-<div class="ttc" id="aclass_hittable_model_html_ab08b860852d56bdbd280d275d494a5ae"><div class="ttname"><a href="class_hittable_model.html#ab08b860852d56bdbd280d275d494a5ae">HittableModel::print</a></div><div class="ttdeci">string print()</div><div class="ttdef"><b>Definition</b> hittable_model.cpp:65</div></div>
+<div class="ttc" id="aclass_hittable_model_html_a612874397545c2dc32f7d0a12d85fa09"><div class="ttname"><a href="class_hittable_model.html#a612874397545c2dc32f7d0a12d85fa09">HittableModel::get_point</a></div><div class="ttdeci">vec3 get_point(int index)</div><div class="ttdef"><b>Definition</b> hittable_model.cpp:58</div></div>
+<div class="ttc" id="aclass_hittable_model_html_a7c151289061b002b20f470901a07d494"><div class="ttname"><a href="class_hittable_model.html#a7c151289061b002b20f470901a07d494">HittableModel::get_face</a></div><div class="ttdeci">HittableFace get_face(int index)</div><div class="ttdef"><b>Definition</b> hittable_model.cpp:62</div></div>
+<div class="ttc" id="aclass_hittable_model_html_a93384da7f02b1ff5f6f184bc81fdc426"><div class="ttname"><a href="class_hittable_model.html#a93384da7f02b1ff5f6f184bc81fdc426">HittableModel::hit</a></div><div class="ttdeci">bool hit(const Ray &amp;r, Interval ray_t, HitRecord &amp;rec) const override</div><div class="ttdef"><b>Definition</b> hittable_model.cpp:85</div></div>
+<div class="ttc" id="aclass_hittable_model_html_ab08b860852d56bdbd280d275d494a5ae"><div class="ttname"><a href="class_hittable_model.html#ab08b860852d56bdbd280d275d494a5ae">HittableModel::print</a></div><div class="ttdeci">string print()</div><div class="ttdef"><b>Definition</b> hittable_model.cpp:67</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

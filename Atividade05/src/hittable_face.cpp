@@ -1,8 +1,9 @@
 #include "hittable_face.h"
 
 
-HittableFace::HittableFace(vector<vec3> points) {
+HittableFace::HittableFace(vector<vec3> points, shared_ptr<Material> _material) {
 	this->points = points;
+	this->mat = _material;
 
 	vec3 u = points[1] - points[0];
 	vec3 v = points[2] - points[0];
@@ -51,6 +52,7 @@ bool HittableFace::hit(const Ray& r, Interval ray_t, HitRecord& rec) const {
 
 	rec.set_t(r, t);
 	rec.set_face_normal(r, normal);
+	rec.mat = mat;
 
 	return (0 < a) && (a < 1) && (0 < b) && (b < 1) && (a + b < 1);
 
