@@ -26,7 +26,7 @@ int main() {
     //cam.render(world);
 
     // Generate icosahedron
-    ifstream myfile(".\\data\\icosahedron.obj");
+    ifstream myfile(".\\data\\weird_triangle.obj");
 
     HittableList world2;
     world2.add(make_shared<HittableModel>(myfile, material_ground));
@@ -44,7 +44,6 @@ int main() {
     cam2.center = vec3(0, 0, 5);
 
     cam2.render(world2);
-
 
     std::ofstream mfile3;
     mfile3.open("three_objects_image_angle2.ppm");

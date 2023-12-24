@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['samples_5fper_5fpixel_0',['samples_per_pixel',['../class_camera.html#adf7924ba329c158ad7111dbb0fd7ea38',1,'Camera']]]
+  ['image_5fwidth_0',['image_width',['../class_camera.html#a8edd911724bfb3bb54cfbdc5c2e90c47',1,'Camera']]]
 ];

@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "point.h"
 #include "hittable.h"
 #include "hittable_face.h"
 #include "Atividade02/src/vec3.h"
@@ -10,13 +11,16 @@
 #pragma once
 
 class HittableModel : public Hittable {
-private:
+protected:
 	/// Vetor dos pontos do modelo.
-	vector<vec3> points;
+	vector<Point> points;
 	/// Vetor das faces do modelo.
 	vector<HittableFace> faces;
 	/// Material do modelo.
 	shared_ptr<Material> mat;
+	/// Índice para definição de normal.
+	int point_normal_index = 0;
+
 
 	/// Delimitador de leitura para o arquivo .obj.
 	string delimiter = "  ";
@@ -24,7 +28,12 @@ private:
 	/// Função auxiliar do construtor. Gera um ponto.
 	/// @param line Linha de ponto de um arquivo .obj.
 	/// @returns Um ponto gerado pela linha do .obj.
-	vec3 create_point(string line);
+	Point create_point(string line);
+
+	/// Define a normal de um ponto.
+	/// @param line Linha de ponto de um arquivo .obj.
+	void set_point_normal(string line);
+
 	/// Função auxiliar do construtor. Gera uma face.
 	/// @param line Linha de face de um arquivo .obj.
 	/// @returns Uma face gerada pela linha do .obj.
@@ -43,7 +52,7 @@ public:
 	/// Retorna um ponto do modelo, dado seu índice.
 	/// @param index Índice do ponto a ser obtido.
 	/// @returns Ponto a ser obtido.
-	vec3 get_point(int index);
+	Point get_point(int index);
 
 	/// Retorna uma face.
 	/// @param index Índice da face a ser obtida.

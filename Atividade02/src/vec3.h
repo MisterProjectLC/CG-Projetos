@@ -79,20 +79,34 @@ public:
         return (fabs(e[0]) < s) && (fabs(e[1]) < s) && (fabs(e[2]) < s);
     }
 
+    /// Retorna a distância deste ponto até outro ponto.
+    /// @param p2 O outro ponto.
+    /// @returns Comprimento da distância deste ponto até o outro ponto.
+    double distance_to(vec3 p2) const;
+
+    /// Retorna uma versão impressa do vetor.
+    string to_string() {
+        return std::to_string(e[0]) + " " + std::to_string(e[1]) + " " + std::to_string(e[2]);
+    }
+
     /// Retorna um vetor com valores completamente aleatorizados.
     static vec3 random() {
         return vec3(random_double(), random_double(), random_double());
     }
 
     /// Retorna um vetor com valores aleatorizados dentro de um intervalo.
+    /// @param min Chão do valor.
+    /// @param max Teto do valor.
     static vec3 random(double min, double max) {
         return vec3(random_double(min, max), random_double(min, max), random_double(min, max));
     }
 
-    /// Retorna uma versão impressa do vetor.
-    string to_string() {
-        return std::to_string(e[0]) + " " + std::to_string(e[1]) + " " + std::to_string(e[2]);
-    }
+    /// Retorna um vetor interpolado R entre dois vetores A e B.
+    /// @param v1 Vetor A.
+    /// @param v2 Vetor B.
+    /// @param t Valor de 0 a 1, correspondente à porcentagem entre A e B em que o vetor R deve estar.
+    /// @returns Vetor R, interpolado entre A e B.
+    static vec3 lerp(vec3 v1, vec3 v2, double t);
 };
 
 // point3 is just an alias for vec3, but useful for geometric clarity in the code.
@@ -215,4 +229,12 @@ inline vec3 refract(const vec3& uv, const vec3& n, double etai_over_etat) {
     return r_out_perp + r_out_parallel;
 }
 
+inline double vec3::distance_to(vec3 p2) const {
+    return (*this - p2).length();
+}
+
+inline vec3 vec3::lerp(vec3 v1, vec3 v2, double t) {
+    vec3 v = (v1 * t) + (v2 * (1 - t));
+    return v;
+}
 #endif

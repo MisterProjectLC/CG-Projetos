@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lambertian_0',['lambertian',['../class_lambertian.html',1,'Lambertian'],['../class_lambertian.html#a1e86fe55fef898bc4bf5f5b8173444f3',1,'Lambertian::Lambertian()']]]
+  ['image_5fwidth_0',['image_width',['../class_camera.html#a8edd911724bfb3bb54cfbdc5c2e90c47',1,'Camera']]]
 ];

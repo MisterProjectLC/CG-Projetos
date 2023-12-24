@@ -15,7 +15,11 @@ HittableModel::HittableModel(ifstream& obj_file, shared_ptr<Material> _material)
         switch (myline[0])
         {
         case 'v':
-            points.push_back(create_point(myline.substr(2)));
+            if (myline[1] == ' ')
+                points.push_back(create_point(myline.substr(2)));
+            else if (myline[1] == 'n')
+                set_point_normal(myline.substr(3));
+
             break;
         case 'f':
             faces.push_back(create_face(myline.substr(2)));
@@ -27,35 +31,48 @@ HittableModel::HittableModel(ifstream& obj_file, shared_ptr<Material> _material)
 }
 
 
-vec3 HittableModel::create_point(string line) {
+Point HittableModel::create_point(string line) {
     size_t pos = 0;
-    int index = 0;
     vector<double> v;
     while ((pos = line.find(delimiter)) != string::npos) {
         v.push_back(stod(line.substr(0, pos)));
         line.erase(0, pos + delimiter.length());
-        index++;
     }
     v.push_back(stod(line.substr(0, pos)));
-    return vec3(v[0], v[1], v[2]);
+
+    return Point(vec3(v[0], v[1], v[2]));
+}
+
+
+void HittableModel::set_point_normal(string line) {
+    size_t pos = 0;
+    int index = 0;
+    vec3 v;
+    while ((pos = line.find(delimiter)) != string::npos) {
+        v[index] = stod(line.substr(0, pos));
+        line.erase(0, pos + delimiter.length());
+        index++;
+    }
+    v[index] = stod(line.substr(0, pos));
+
+    points[point_normal_index].set_custom_normal(v);
+    point_normal_index++;
 }
 
 
 HittableFace HittableModel::create_face(string line) {
     size_t pos = 0;
-    int index = 0;
-    vector<vec3> returned;
+    vector<Point> returned;
     while ((pos = line.find(delimiter)) != string::npos) {
         returned.push_back(points[stoi(line.substr(0, pos)) - 1]);
         line.erase(0, pos + delimiter.length());
-        index++;
     }
     returned.push_back(points[stoi(line.substr(0, pos)) - 1]);
     return HittableFace(returned, mat);
 }
 
 
-vec3 HittableModel::get_point(int index) {
+Point HittableModel::get_point(int index) {
     return points[index];
 }
 

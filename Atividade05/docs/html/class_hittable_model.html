@@ -71,6 +71,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_hittable_model-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">HittableModel Class Reference</div></div>
 </div><!--header-->
@@ -91,12 +93,44 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a02529ff19e677795e9f1511589723a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab08b860852d56bdbd280d275d494a5ae" id="r_ab08b860852d56bdbd280d275d494a5ae"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hittable_model.html#ab08b860852d56bdbd280d275d494a5ae">print</a> ()</td></tr>
 <tr class="separator:ab08b860852d56bdbd280d275d494a5ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a612874397545c2dc32f7d0a12d85fa09" id="r_a612874397545c2dc32f7d0a12d85fa09"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hittable_model.html#a612874397545c2dc32f7d0a12d85fa09">get_point</a> (int index)</td></tr>
-<tr class="separator:a612874397545c2dc32f7d0a12d85fa09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d278bbadd2be745b9c366ed4f54ebe6" id="r_a0d278bbadd2be745b9c366ed4f54ebe6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hittable_model.html#a0d278bbadd2be745b9c366ed4f54ebe6">get_point</a> (int index)</td></tr>
+<tr class="separator:a0d278bbadd2be745b9c366ed4f54ebe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c151289061b002b20f470901a07d494" id="r_a7c151289061b002b20f470901a07d494"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hittable_face.html">HittableFace</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hittable_model.html#a7c151289061b002b20f470901a07d494">get_face</a> (int index)</td></tr>
 <tr class="separator:a7c151289061b002b20f470901a07d494"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93384da7f02b1ff5f6f184bc81fdc426" id="r_a93384da7f02b1ff5f6f184bc81fdc426"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hittable_model.html#a93384da7f02b1ff5f6f184bc81fdc426">hit</a> (const Ray &amp;r, Interval ray_t, <a class="el" href="class_hit_record.html">HitRecord</a> &amp;rec) const override</td></tr>
 <tr class="separator:a93384da7f02b1ff5f6f184bc81fdc426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ab5c8601ff0d2f2f929ab96e5d9117991" id="r_ab5c8601ff0d2f2f929ab96e5d9117991"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hittable_model.html#ab5c8601ff0d2f2f929ab96e5d9117991">create_point</a> (string line)</td></tr>
+<tr class="separator:ab5c8601ff0d2f2f929ab96e5d9117991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a253d9c91645f1b463206d1d7acf27eca" id="r_a253d9c91645f1b463206d1d7acf27eca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hittable_model.html#a253d9c91645f1b463206d1d7acf27eca">set_point_normal</a> (string line)</td></tr>
+<tr class="separator:a253d9c91645f1b463206d1d7acf27eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e01be1e0d8cadcee3b66f1cf5ff977" id="r_aa2e01be1e0d8cadcee3b66f1cf5ff977"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hittable_face.html">HittableFace</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hittable_model.html#aa2e01be1e0d8cadcee3b66f1cf5ff977">create_face</a> (string line)</td></tr>
+<tr class="separator:aa2e01be1e0d8cadcee3b66f1cf5ff977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a644615cf92928fdc78f7fb6365da1008" id="r_a644615cf92928fdc78f7fb6365da1008"><td class="memItemLeft" align="right" valign="top"><a id="a644615cf92928fdc78f7fb6365da1008" name="a644615cf92928fdc78f7fb6365da1008"></a>
+vector&lt; <a class="el" href="class_point.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>points</b></td></tr>
+<tr class="memdesc:a644615cf92928fdc78f7fb6365da1008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vetor dos pontos do modelo. <br /></td></tr>
+<tr class="separator:a644615cf92928fdc78f7fb6365da1008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34769b1736af52d0a24d23e27a75cd29" id="r_a34769b1736af52d0a24d23e27a75cd29"><td class="memItemLeft" align="right" valign="top"><a id="a34769b1736af52d0a24d23e27a75cd29" name="a34769b1736af52d0a24d23e27a75cd29"></a>
+vector&lt; <a class="el" href="class_hittable_face.html">HittableFace</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>faces</b></td></tr>
+<tr class="memdesc:a34769b1736af52d0a24d23e27a75cd29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vetor das faces do modelo. <br /></td></tr>
+<tr class="separator:a34769b1736af52d0a24d23e27a75cd29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace79f3b561c6d5216f9e9ab59279fa3d" id="r_ace79f3b561c6d5216f9e9ab59279fa3d"><td class="memItemLeft" align="right" valign="top"><a id="ace79f3b561c6d5216f9e9ab59279fa3d" name="ace79f3b561c6d5216f9e9ab59279fa3d"></a>
+shared_ptr&lt; <a class="el" href="class_material.html">Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mat</b></td></tr>
+<tr class="memdesc:ace79f3b561c6d5216f9e9ab59279fa3d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_material.html">Material</a> do modelo. <br /></td></tr>
+<tr class="separator:ace79f3b561c6d5216f9e9ab59279fa3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad19432eb75006aa9412c14852d6dafd3" id="r_ad19432eb75006aa9412c14852d6dafd3"><td class="memItemLeft" align="right" valign="top"><a id="ad19432eb75006aa9412c14852d6dafd3" name="ad19432eb75006aa9412c14852d6dafd3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>point_normal_index</b> = 0</td></tr>
+<tr class="memdesc:ad19432eb75006aa9412c14852d6dafd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Õndice para definiÁ„o de normal. <br /></td></tr>
+<tr class="separator:ad19432eb75006aa9412c14852d6dafd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd9dd11958089eca40ca0b48660a749" id="r_a2cd9dd11958089eca40ca0b48660a749"><td class="memItemLeft" align="right" valign="top"><a id="a2cd9dd11958089eca40ca0b48660a749" name="a2cd9dd11958089eca40ca0b48660a749"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>delimiter</b> = &quot; &quot;</td></tr>
+<tr class="memdesc:a2cd9dd11958089eca40ca0b48660a749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delimitador de leitura para o arquivo .obj. <br /></td></tr>
+<tr class="separator:a2cd9dd11958089eca40ca0b48660a749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a02529ff19e677795e9f1511589723a91" name="a02529ff19e677795e9f1511589723a91"></a>
@@ -135,6 +169,72 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa2e01be1e0d8cadcee3b66f1cf5ff977" name="aa2e01be1e0d8cadcee3b66f1cf5ff977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e01be1e0d8cadcee3b66f1cf5ff977">&#9670;&#160;</a></span>create_face()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_hittable_face.html">HittableFace</a> HittableModel::create_face </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>FunÁ„o auxiliar do construtor. Gera uma face. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Linha de face de um arquivo .obj. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Uma face gerada pela linha do .obj. </dd></dl>
+
+</div>
+</div>
+<a id="ab5c8601ff0d2f2f929ab96e5d9117991" name="ab5c8601ff0d2f2f929ab96e5d9117991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5c8601ff0d2f2f929ab96e5d9117991">&#9670;&#160;</a></span>create_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_point.html">Point</a> HittableModel::create_point </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>FunÁ„o auxiliar do construtor. Gera um ponto. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Linha de ponto de um arquivo .obj. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Um ponto gerado pela linha do .obj. </dd></dl>
+
+</div>
+</div>
 <a id="a7c151289061b002b20f470901a07d494" name="a7c151289061b002b20f470901a07d494"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7c151289061b002b20f470901a07d494">&#9670;&#160;</a></span>get_face()</h2>
 
@@ -160,14 +260,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a612874397545c2dc32f7d0a12d85fa09" name="a612874397545c2dc32f7d0a12d85fa09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a612874397545c2dc32f7d0a12d85fa09">&#9670;&#160;</a></span>get_point()</h2>
+<a id="a0d278bbadd2be745b9c366ed4f54ebe6" name="a0d278bbadd2be745b9c366ed4f54ebe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d278bbadd2be745b9c366ed4f54ebe6">&#9670;&#160;</a></span>get_point()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">vec3 HittableModel::get_point </td>
+          <td class="memname"><a class="el" href="class_point.html">Point</a> HittableModel::get_point </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -257,9 +357,41 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a253d9c91645f1b463206d1d7acf27eca" name="a253d9c91645f1b463206d1d7acf27eca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a253d9c91645f1b463206d1d7acf27eca">&#9670;&#160;</a></span>set_point_normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HittableModel::set_point_normal </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Define a normal de um ponto. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Linha de ponto de um arquivo .obj. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>E:/Documentos/UFSCAR/Computa√ß√£o Gr√°fica/Projetos/Atividade05/src/<a class="el" href="hittable__model_8h_source.html">hittable_model.h</a></li>
-<li>E:/Documentos/UFSCAR/Computa√ß√£o Gr√°fica/Projetos/Atividade05/src/<b>hittable_model.cpp</b></li>
+<li><a class="el" href="hittable__model_8h_source.html">hittable_model.h</a></li>
+<li><b>hittable_model.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

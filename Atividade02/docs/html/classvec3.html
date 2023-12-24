@@ -128,6 +128,12 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>length</b> () const
 double&#160;</td><td class="memItemRight" valign="bottom"><b>length_squared</b> () const</td></tr>
 <tr class="memdesc:a1be4d540a0eef0cc388b6b0a23021ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o comprimento do vetor, elevado ao quadrado. <br /></td></tr>
 <tr class="separator:a1be4d540a0eef0cc388b6b0a23021ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3113f5f52253753d0a37aa8972b23f52" id="r_a3113f5f52253753d0a37aa8972b23f52"><td class="memItemLeft" align="right" valign="top"><a id="a3113f5f52253753d0a37aa8972b23f52" name="a3113f5f52253753d0a37aa8972b23f52"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>near_zero</b> () const</td></tr>
+<tr class="memdesc:a3113f5f52253753d0a37aa8972b23f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna verdadeiro se o vetor estiver próximo de zero nas 3 dimensões. <br /></td></tr>
+<tr class="separator:a3113f5f52253753d0a37aa8972b23f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f4363d7d70a895831b224aaeb71970" id="r_a33f4363d7d70a895831b224aaeb71970"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvec3.html#a33f4363d7d70a895831b224aaeb71970">distance_to</a> (<a class="el" href="classvec3.html">vec3</a> p2) const</td></tr>
+<tr class="separator:a33f4363d7d70a895831b224aaeb71970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabb22dabfe07ce1c99b5bf0706885bb5" id="r_aabb22dabfe07ce1c99b5bf0706885bb5"><td class="memItemLeft" align="right" valign="top"><a id="aabb22dabfe07ce1c99b5bf0706885bb5" name="aabb22dabfe07ce1c99b5bf0706885bb5"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> ()</td></tr>
 <tr class="memdesc:aabb22dabfe07ce1c99b5bf0706885bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma versão impressa do vetor. <br /></td></tr>
@@ -139,10 +145,10 @@ Static Public Member Functions</h2></td></tr>
 static <a class="el" href="classvec3.html">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>random</b> ()</td></tr>
 <tr class="memdesc:ac7909af0c2e2f032caf85030c582092c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna um vetor com valores completamente aleatorizados. <br /></td></tr>
 <tr class="separator:ac7909af0c2e2f032caf85030c582092c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91d5a762d888962d73906242950367aa" id="r_a91d5a762d888962d73906242950367aa"><td class="memItemLeft" align="right" valign="top"><a id="a91d5a762d888962d73906242950367aa" name="a91d5a762d888962d73906242950367aa"></a>
-static <a class="el" href="classvec3.html">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>random</b> (double min, double max)</td></tr>
-<tr class="memdesc:a91d5a762d888962d73906242950367aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna um vetor com valores aleatorizados dentro de um intervalo. <br /></td></tr>
+<tr class="memitem:a91d5a762d888962d73906242950367aa" id="r_a91d5a762d888962d73906242950367aa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvec3.html">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvec3.html#a91d5a762d888962d73906242950367aa">random</a> (double min, double max)</td></tr>
 <tr class="separator:a91d5a762d888962d73906242950367aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b56e2f98046a47ca66e20ee582eff7" id="r_a95b56e2f98046a47ca66e20ee582eff7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvec3.html">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvec3.html#a95b56e2f98046a47ca66e20ee582eff7">lerp</a> (<a class="el" href="classvec3.html">vec3</a> v1, <a class="el" href="classvec3.html">vec3</a> v2, double t)</td></tr>
+<tr class="separator:a95b56e2f98046a47ca66e20ee582eff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -205,6 +211,90 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>e</b> [3]</td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a33f4363d7d70a895831b224aaeb71970" name="a33f4363d7d70a895831b224aaeb71970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f4363d7d70a895831b224aaeb71970">&#9670;&#160;</a></span>distance_to()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double vec3::distance_to </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvec3.html">vec3</a>&#160;</td>
+          <td class="paramname"><em>p2</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retorna a distância deste ponto até outro ponto. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p2</td><td>O outro ponto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Comprimento da distância deste ponto até o outro ponto. </dd></dl>
+
+</div>
+</div>
+<a id="a95b56e2f98046a47ca66e20ee582eff7" name="a95b56e2f98046a47ca66e20ee582eff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b56e2f98046a47ca66e20ee582eff7">&#9670;&#160;</a></span>lerp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvec3.html">vec3</a> vec3::lerp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvec3.html">vec3</a>&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvec3.html">vec3</a>&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retorna um vetor interpolado R entre dois vetores A e B. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>Vetor A. </td></tr>
+    <tr><td class="paramname">v2</td><td>Vetor B. </td></tr>
+    <tr><td class="paramname">t</td><td>Valor de 0 a 1, correspondente à porcentagem entre A e B em que o vetor R deve estar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vetor R, interpolado entre A e B. </dd></dl>
+
+</div>
+</div>
 <a id="abcfad16e7d2928aed8a32832a4d101c7" name="abcfad16e7d2928aed8a32832a4d101c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abcfad16e7d2928aed8a32832a4d101c7">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
 
@@ -259,8 +349,51 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>e</b> [3]</td></tr>
 
 </div>
 </div>
+<a id="a91d5a762d888962d73906242950367aa" name="a91d5a762d888962d73906242950367aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d5a762d888962d73906242950367aa">&#9670;&#160;</a></span>random()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classvec3.html">vec3</a> vec3::random </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retorna um vetor com valores aleatorizados dentro de um intervalo. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>Chão do valor. </td></tr>
+    <tr><td class="paramname">max</td><td>Teto do valor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>E:/Documentos/UFSCAR/ComputaÃ§Ã£o GrÃ¡fica/Projetos/Atividade02/src/<a class="el" href="vec3_8h_source.html">vec3.h</a></li>
+<li><a class="el" href="vec3_8h_source.html">vec3.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

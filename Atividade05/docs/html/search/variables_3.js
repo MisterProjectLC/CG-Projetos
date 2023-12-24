@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max_5fdepth_0',['max_depth',['../class_camera.html#a2ad66b9f99db0f0ef4f59e4e19633499',1,'Camera']]]
+  ['faces_0',['faces',['../class_hittable_model.html#a34769b1736af52d0a24d23e27a75cd29',1,'HittableModel']]]
 ];

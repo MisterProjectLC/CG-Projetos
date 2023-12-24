@@ -87,13 +87,15 @@ Inheritance diagram for HittableFace:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac931ae56eba2217bd576d5c5373ee311" id="r_ac931ae56eba2217bd576d5c5373ee311"><td class="memItemLeft" align="right" valign="top"><a id="ac931ae56eba2217bd576d5c5373ee311" name="ac931ae56eba2217bd576d5c5373ee311"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>HittableFace</b> (vector&lt; vec3 &gt; points, shared_ptr&lt; <a class="el" href="class_material.html">Material</a> &gt; _material)</td></tr>
-<tr class="separator:ac931ae56eba2217bd576d5c5373ee311"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac27551dcbaa5f18fca6a80ff1cd93e36" id="r_ac27551dcbaa5f18fca6a80ff1cd93e36"><td class="memItemLeft" align="right" valign="top"><a id="ac27551dcbaa5f18fca6a80ff1cd93e36" name="ac27551dcbaa5f18fca6a80ff1cd93e36"></a>
-vector&lt; vec3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_points</b> ()</td></tr>
-<tr class="memdesc:ac27551dcbaa5f18fca6a80ff1cd93e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna os pontos da face. <br /></td></tr>
-<tr class="separator:ac27551dcbaa5f18fca6a80ff1cd93e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1890c9b67b6ec17d77a58c2f4ec3a13f" id="r_a1890c9b67b6ec17d77a58c2f4ec3a13f"><td class="memItemLeft" align="right" valign="top"><a id="a1890c9b67b6ec17d77a58c2f4ec3a13f" name="a1890c9b67b6ec17d77a58c2f4ec3a13f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HittableFace</b> (vector&lt; <a class="el" href="class_point.html">Point</a> &gt; points, shared_ptr&lt; <a class="el" href="class_material.html">Material</a> &gt; _material)</td></tr>
+<tr class="separator:a1890c9b67b6ec17d77a58c2f4ec3a13f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae135dc76b4dc08b4f2b60e2088448d65" id="r_ae135dc76b4dc08b4f2b60e2088448d65"><td class="memItemLeft" align="right" valign="top"><a id="ae135dc76b4dc08b4f2b60e2088448d65" name="ae135dc76b4dc08b4f2b60e2088448d65"></a>
+vector&lt; <a class="el" href="class_point.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_points</b> ()</td></tr>
+<tr class="memdesc:ae135dc76b4dc08b4f2b60e2088448d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna os pontos da face. <br /></td></tr>
+<tr class="separator:ae135dc76b4dc08b4f2b60e2088448d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8389aba20963d58f9ba9f494a891b41" id="r_ab8389aba20963d58f9ba9f494a891b41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hittable_face.html#ab8389aba20963d58f9ba9f494a891b41">move</a> (vec3 transform)</td></tr>
+<tr class="separator:ab8389aba20963d58f9ba9f494a891b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1caec308648120bba5cb47307fb7333b" id="r_a1caec308648120bba5cb47307fb7333b"><td class="memItemLeft" align="right" valign="top"><a id="a1caec308648120bba5cb47307fb7333b" name="a1caec308648120bba5cb47307fb7333b"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> ()</td></tr>
 <tr class="memdesc:a1caec308648120bba5cb47307fb7333b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma vers�o impressa do vetor. <br /></td></tr>
@@ -156,9 +158,33 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> ()</t
 
 </div>
 </div>
+<a id="ab8389aba20963d58f9ba9f494a891b41" name="ab8389aba20963d58f9ba9f494a891b41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8389aba20963d58f9ba9f494a891b41">&#9670;&#160;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HittableFace::move </td>
+          <td>(</td>
+          <td class="paramtype">vec3&#160;</td>
+          <td class="paramname"><em>transform</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Move a face, dado certo deslocamento. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transform</td><td>O deslocamento. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>E:/Documentos/UFSCAR/Computação Gráfica/Projetos/Atividade05/src/<a class="el" href="hittable__face_8h_source.html">hittable_face.h</a></li>
-<li>E:/Documentos/UFSCAR/Computação Gráfica/Projetos/Atividade05/src/<b>hittable_face.cpp</b></li>
+<li><a class="el" href="hittable__face_8h_source.html">hittable_face.h</a></li>
+<li><b>hittable_face.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

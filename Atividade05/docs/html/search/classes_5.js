@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sphere_0',['Sphere',['../class_sphere.html',1,'']]]
+  ['point_0',['Point',['../class_point.html',1,'']]]
 ];

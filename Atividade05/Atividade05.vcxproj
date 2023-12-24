@@ -146,6 +146,7 @@
     <ClInclude Include="src\camera.h" />
     <ClInclude Include="src\hittable.h" />
     <ClInclude Include="src\material.h" />
+    <ClInclude Include="src\point.h" />
     <ClInclude Include="src\sphere.h" />
   </ItemGroup>
   <ItemGroup>

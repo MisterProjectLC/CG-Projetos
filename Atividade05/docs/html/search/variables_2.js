@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['image_5fwidth_0',['image_width',['../class_camera.html#a8edd911724bfb3bb54cfbdc5c2e90c47',1,'Camera']]]
+  ['delimiter_0',['delimiter',['../class_hittable_model.html#a2cd9dd11958089eca40ca0b48660a749',1,'HittableModel']]]
 ];

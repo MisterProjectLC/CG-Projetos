@@ -23,10 +23,18 @@ public:
     int    max_depth = 10;
     /// Camera center
     point3 center = point3(0, 0, 0);
+    /// Camera target
+    point3 target = point3(0, 0, -1);
 
 
     Camera(std::ofstream* this_file) {
         file = this_file;
+    }
+
+    Camera(std::ofstream* this_file, vec3 center, vec3 target) {
+        file = this_file;
+        this->center = center;
+        this->target = target;
     }
 
 

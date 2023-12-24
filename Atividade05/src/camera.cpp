@@ -33,16 +33,17 @@ void Camera::initialize() {
     auto viewport_width = viewport_height * (static_cast<double>(image_width) / image_height);
 
     // Calculate the vectors across the horizontal and down the vertical viewport edges.
-    auto viewport_u = vec3(viewport_width, 0, 0);
     auto viewport_v = vec3(0, -viewport_height, 0);
+    auto camera_direction = unit_vector(target - center);
+    
+    auto viewport_u = unit_vector(cross(viewport_v, camera_direction))*viewport_width;
 
     // Calculate the horizontal and vertical delta vectors from pixel to pixel.
     pixel_delta_u = viewport_u / image_width;
     pixel_delta_v = viewport_v / image_height;
 
     // Calculate the location of the upper left pixel.
-    auto viewport_upper_left =
-        - vec3(0, 0, focal_length) - viewport_u / 2 - viewport_v / 2;
+    auto viewport_upper_left = camera_direction*focal_length - viewport_u / 2 - viewport_v / 2;
     pixel00_loc = viewport_upper_left + 0.5 * (pixel_delta_u + pixel_delta_v);
 }
 
@@ -50,14 +51,12 @@ void Camera::initialize() {
 
 Ray Camera::get_ray(int i, int j) const {
     // Get a randomly sampled camera ray for the pixel at location i,j.
-
     auto pixel_center = pixel00_loc + (i * pixel_delta_u) + (j * pixel_delta_v);
     auto pixel_sample = pixel_center + pixel_sample_square();
 
-    auto ray_origin = center;
-    auto ray_direction = pixel_sample - ray_origin;
+    auto ray_direction = pixel_sample - center;
 
-    return Ray(ray_origin, ray_direction);
+    return Ray(center, ray_direction);
 }
 
 vec3 Camera::pixel_sample_square() const {

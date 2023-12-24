@@ -1,4 +1,5 @@
 #include <vector>
+#include "point.h"
 #include "hittable.h"
 #include "Atividade02/src/vec3.h"
 #include "Atividade03/src/ray.h"
@@ -8,17 +9,21 @@
 class HittableFace : public Hittable
 {
 private:
-	vector<vec3> points;
+	vector<Point> points;
 	vec3 w;
 	vec3 normal;
 	shared_ptr<Material> mat;
 
 public:
 	// Construtor de uma face, dado seus pontos.
-	HittableFace(vector<vec3> points, shared_ptr<Material> _material);
+	HittableFace(vector<Point> points, shared_ptr<Material> _material);
 
 	/// Retorna os pontos da face.
-	vector<vec3> get_points();
+	vector<Point> get_points();
+
+	/// Move a face, dado certo deslocamento.
+	/// @param transform O deslocamento.
+	void move(vec3 transform);
 
 	/// Retorna uma versão impressa do vetor.
 	string to_string();

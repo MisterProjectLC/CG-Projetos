@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: E:/Documentos/UFSCAR/Computação Gráfica/Projetos/Atividade05/src/sphere.h Source File</title>
+<title>My Project: sphere.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -51,6 +51,7 @@ $(function() {
 $(document).ready(function() { init_codefold(0); });
 /* @license-end */
 </script>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -72,11 +73,6 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">sphere.h</div></div>
 </div><!--header-->
@@ -90,19 +86,24 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_sphere.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sphere.html">Sphere</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_hittable.html">Hittable</a> {</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_class" href="class_sphere.html">Sphere</a>(point3 _center, <span class="keywordtype">double</span> _radius, shared_ptr&lt;Material&gt; _material) : center(_center), radius(_radius), mat(_material) {}</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sphere.html#aa6ac68b1d53b56175b41ec44d6b16656">hit</a>(<span class="keyword">const</span> Ray&amp; r, Interval ray_t, <a class="code hl_class" href="class_hit_record.html">HitRecord</a>&amp; rec) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    point3 center;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">double</span> radius;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    shared_ptr&lt;Material&gt; mat;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_class" href="class_sphere.html">Sphere</a>() {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        center = point3(0, 0, 0);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        radius = 1;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="class_sphere.html">Sphere</a>(point3 _center, <span class="keywordtype">double</span> _radius, shared_ptr&lt;Material&gt; _material) : center(_center), radius(_radius), mat(_material) {}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sphere.html#aa6ac68b1d53b56175b41ec44d6b16656">hit</a>(<span class="keyword">const</span> Ray&amp; r, Interval ray_t, <a class="code hl_class" href="class_hit_record.html">HitRecord</a>&amp; rec) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    point3 center;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">double</span> radius;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    shared_ptr&lt;Material&gt; mat;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
 </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="ttc" id="aclass_hit_record_html"><div class="ttname"><a href="class_hit_record.html">HitRecord</a></div><div class="ttdef"><b>Definition</b> hittable.h:10</div></div>
 <div class="ttc" id="aclass_hittable_html"><div class="ttname"><a href="class_hittable.html">Hittable</a></div><div class="ttdef"><b>Definition</b> hittable.h:39</div></div>
 <div class="ttc" id="aclass_sphere_html"><div class="ttname"><a href="class_sphere.html">Sphere</a></div><div class="ttdef"><b>Definition</b> sphere.h:7</div></div>
